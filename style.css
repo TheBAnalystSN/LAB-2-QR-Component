@@ -1,0 +1,123 @@
+style.css
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: hsl(212, 45%, 89%);
+  color: hsl(216, 15%, 48%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ---------- Container ---------- */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 60px); /* Leaves space for footer */
+}
+
+/* ---------- QR Card ---------- */
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  max-width: 320px;
+  transition: all 0.3s ease;
+}
+
+.qr-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  color: hsl(218, 44%, 22%);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
+p {
+  font-size: 15px;
+  color: hsl(216, 15%, 48%);
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+/* ---------- Footer ---------- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: hsl(216, 15%, 48%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Responsive Design ---------- */
+
+/* Mobile (default) */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .card {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet and Desktop */
+@media (min-width: 768px) {
+  body {
+    background: linear-gradient(hsl(212, 45%, 89%), hsl(212, 45%, 85%));
+  }
+
+  .card {
+    max-width: 360px;
+    padding: 1.5rem;
+    border-radius: 24px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+/* Large Desktop (1440px design width) */
+@media (min-width: 1200px) {
+  .card {
+    max-width: 400px;
+    transform: scale(1.05);
+  }
+}
